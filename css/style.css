@@ -136,7 +136,7 @@ nav a:focus {
 /* Step 3: Write selector/rule property to style all elements when in focus*/
 
 *:focus {
-  border: 2px, solid, #000;
+  border: 2px solid #000;
 }
 
 /* Step 4: Write selector/rule property to style the container */
@@ -144,15 +144,14 @@ nav a:focus {
 .container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  row-gap: 15px;
+  gap: 15px;
 }
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
 
-.container:first-child {
-  grid-column-start: 1;
-  grid-column-end: 4;
+.container div:first-child {
+  grid-column: 1/ -1;
   background-image: url("../images/header.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -227,12 +226,14 @@ first div in the grid  and place it in the grid. */
   /* Step 9: Write the selector/rule property to style the nav element */
   nav {
     padding-top: 30px;
+    padding-left: 0px;
     padding-bottom: 30px;
+    padding-right: 0px;
     text-align: right;
   }
 
   /* Step 10: Write the selector/rule property to update the .container class */
-  container {
+  .container {
     display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
   }
